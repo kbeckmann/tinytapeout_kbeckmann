@@ -1,7 +1,8 @@
-WOKWI_PROJECT_ID=341150023151518292
-# logic puzzle and muxes
-# 4 inverters 334348818476696146
-# the clock divider 334335179919196756
+WOKWI_PROJECT_ID=341153704514159187
+# 8 bit shift register.
+# Input 0 is clock
+# Input 1 is data
+# Output 7:0 is data out
 fetch:
 	curl https://wokwi.com/api/projects/$(WOKWI_PROJECT_ID)/verilog > src/user_module_$(WOKWI_PROJECT_ID).v
 	sed -e 's/USER_MODULE_ID/$(WOKWI_PROJECT_ID)/g' template/scan_wrapper.v > src/scan_wrapper_$(WOKWI_PROJECT_ID).v
