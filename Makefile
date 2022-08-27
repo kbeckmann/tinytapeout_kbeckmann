@@ -1,7 +1,9 @@
-WOKWI_PROJECT_ID=341153790956667475
-# 8 bit shift register.
+WOKWI_PROJECT_ID=341159915403870803
+# 8 bit double buffered shift register.
+# Register select allows shifting into one shiftreg while outputting from a second.
 # Input 0 is clock
 # Input 1 is data
+# Input 2 is register select
 # Output 7:0 is data out
 fetch:
 	curl https://wokwi.com/api/projects/$(WOKWI_PROJECT_ID)/verilog > src/user_module_$(WOKWI_PROJECT_ID).v
